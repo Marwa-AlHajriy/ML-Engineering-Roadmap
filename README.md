@@ -1,14 +1,16 @@
 # ML-Engineering-Roadmap
-Personalized roadmap from statistician to ml engineer (fill in software engineering gaps)
+
+
+A personalized roadmap from statistician to ml engineer (fill in software engineering gaps)
 
 ---
 
-## Stage 1: Python OOP + Best Practices
+## Stage 1: Python OOP 
 - Python OOP Tutorials - Working with Classes by Corey Schafer (https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc) 
 
 ---
 
-## 🔄 Stage 2: Model Deployment + REST APIs
+## Stage 2: Model Deployment + REST APIs
 - Deployment of ML Models by Krish Naik (https://www.youtube.com/playlist?list=PLZoTAELRMXVOAvUbePX1lTdxQR8EY35Z1)
 
 When deploying machine learning models, it's important to understand the environment where the model will run. Common deployment environments:
