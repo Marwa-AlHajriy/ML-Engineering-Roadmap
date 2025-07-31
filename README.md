@@ -71,17 +71,6 @@ When deploying machine learning models, it's important to understand the environ
      source mycnnexenv/bin/activate  
      ```
    - Created a `requirements.txt` file with the necessary packages:
-     ```text
-     jupyter
-     boto3
-     sagemaker
-     numpy
-     pandas
-     matplotlib
-     tensorflow
-     scikit-learn
-     ipykernel
-     ```
    - Installed dependencies:
      ```bash
      pip install -r requirements.txt
@@ -93,6 +82,9 @@ When deploying machine learning models, it's important to understand the environ
      cnn_brain_tumor.ipynb
      ```
    - Clicked "Select Kernel" and selected the virtual environment (`mycnnexenv`)
+   - Created an S3 bucket named `cnnmodelbucketforsagemaker`.
+       - **Amazon S3** is used to store datasets, model artifacts, and logs.
+       - **Amazon SageMaker** will access data from this bucket to train and deploy the CNN model in the cloud.
    - Started coding the ML pipeline using:
      ```python
      import sagemaker
