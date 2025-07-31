@@ -1,11 +1,11 @@
 # ML-Engineering-Roadmap
 
 
-A personalized roadmap from statistician to ml engineer (fill in software engineering gaps)
+A personalized roadmap from statistician to ML engineer (fill in software engineering gaps and upskill in AI)
 
 ---
 
-## Stage 1: Python OOP 
+## Stage 1: Python OOP (refresher)
 - Python OOP Tutorials - Working with Classes by Corey Schafer (https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc) 
 
 ---
@@ -36,3 +36,27 @@ When deploying machine learning models, it's important to understand the environ
 
 
 ---
+
+
+## Stage 3: Create end-to-end ML project on cloud (AWS)
+
+- End To End Machine Learning Project Implementation Using AWS Sagemaker by Krish Naik (https://www.youtube.com/watch?v=Le-A72NjaWs)
+
+  1. Create Iam user (Administrative access)
+     - Given Access key and Secret Access key to securely connect terminal with aw (next step)
+  
+  2. AWS CLI configure (a command line interfaceto interact with AWS using commands in terminal)
+     - In terminal:
+<pre>
+```bash
+aws configure
+```
+<pre>
+     - Will be asked to enter Access key, Secret Access key, Default region name & Default output format
+     - To check current config:
+<pre>   
+```bash
+cat ~/.aws/config
+```
+<pre>
+  3. 
