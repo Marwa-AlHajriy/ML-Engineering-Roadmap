@@ -88,8 +88,15 @@ When deploying machine learning models, it's important to understand the environ
    - Started coding the ML pipeline using:
      ```python
      import sagemaker
-     import boto3
-     import pandas as pd
+     import boto3   # will be used to connect the bucket
      import tensorflow as tf
+     import matplotlib.pyplot as plt
+     import numpy as np
+     import pandas as pd
+     sm_boto3 = boto3.client("sagemaker")
+     sess = sagemaker.Session()
+     region = sess.boto_session.region_name
+     bucket = 'cnnmodelbucketforsagemaker'
+     print('Using bucket:', bucket)
      ```
 
