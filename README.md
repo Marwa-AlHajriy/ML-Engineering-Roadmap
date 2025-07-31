@@ -47,16 +47,12 @@ When deploying machine learning models, it's important to understand the environ
   
   2. AWS CLI configure (a command line interfaceto interact with AWS using commands in terminal)
      - In terminal:
-<pre>
-```bash
-aws configure
-```
-<pre>
+       ```bash
+       aws configure
+       ```
      - Will be asked to enter Access key, Secret Access key, Default region name & Default output format
      - To check current config:
-<pre>   
-```bash
-cat ~/.aws/config
-```
-<pre>
+       ```bash
+       cat ~/.aws/config
+       ```
   3. 
