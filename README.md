@@ -40,7 +40,8 @@ When deploying machine learning models, it's important to understand the environ
 
 ## Stage 3: Create end-to-end ML project on cloud (AWS)
 
-- End To End Machine Learning Project Implementation Using AWS Sagemaker by Krish Naik (https://www.youtube.com/watch?v=Le-A72NjaWs)
+- Tutorial guide: End To End Machine Learning Project Implementation Using AWS Sagemaker by Krish Naik (https://www.youtube.com/watch?v=Le-A72NjaWs)
+- We will work on a different model, a classification CNN model using Brain Tumor MRI Dataset form Kaggle (https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset?resource=download)
 
   1. Create Iam user (Administrative access)
      - Given Access key and Secret Access key to securely connect terminal with aw (next step)
@@ -55,4 +56,48 @@ When deploying machine learning models, it's important to understand the environ
        ```bash
        cat ~/.aws/config
        ```
-  3. 
+  3. Set up local project environment (VS Code)
+   - On Desktop, created a new project folder/directory, this is where all project files will be stores (data, requirements, gitignore, etc.):
+     ```bash
+     mkdir CNN_Brain_Tumor
+     ```
+   - Opened the `CNN_Brain_Tumor` folder in VSCode
+   - In VSCode terminal, created a virtual environment inside the project folder:
+     ```bash
+     python3 -m venv mycnnexenv
+     ```
+   - Activated the environment:
+     ```bash
+     source mycnnexenv/bin/activate  
+     ```
+   - Created a `requirements.txt` file with the necessary packages:
+     ```text
+     jupyter
+     boto3
+     sagemaker
+     numpy
+     pandas
+     matplotlib
+     tensorflow
+     scikit-learn
+     ipykernel
+     ```
+   - Installed dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+4. Create Jupyter notebook inside VS Code
+
+   - In the same `CNN_Brain_Tumor` folder, created a notebook file:
+     ```
+     cnn_brain_tumor.ipynb
+     ```
+   - Clicked "Select Kernel" and selected the virtual environment (`mycnnexenv`)
+   - Started coding the ML pipeline using:
+     ```python
+     import sagemaker
+     import boto3
+     import pandas as pd
+     import tensorflow as tf
+     ```
+
