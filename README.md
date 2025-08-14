@@ -100,3 +100,26 @@ When deploying machine learning models, it's important to understand the environ
      print('Using bucket:', bucket)
      ```
 
+5. Uploaded dataset to S3 bucket
+   - Prepared zip files of each set after splitting data into train, val, test
+   - Upload zipped files to S3 bucket:
+     ```python
+     prefix = 'sagemaker/cnn_brain_tumor_project'
+     s3_train_path = sess.upload_data('data/Train.zip', bucket=bucket, key_prefix=prefix)
+     s3_val_path   = sess.upload_data('data/Val.zip',   bucket=bucket, key_prefix=prefix)
+     s3_test_path  = sess.upload_data('data/Test.zip',  bucket=bucket, key_prefix=prefix)
+  
+     ```
+
+6. Created Sagemaker Training script (script.py)
+	-	Unzips train/val/test data inside the container.
+	-	Builds TensorFlow datasets using image_dataset_from_directory.
+	-	Defines and trains the CNN model with augmentation and normalization.
+	-	Evaluates the model on the test set.
+	-	Saves:
+    	-	Model in SavedModel format for TensorFlow Serving
+    	-	class_names.json for inference
+    	-	learning_curves.png plot of training vs validation accuracy/loss
+    	-	training_history.json with metrics
+    	-	Confusion matrix and classification report 
+       
